@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>电商订单数据BI统计 -- 品牌销量</title>
+    <script src="/js/echarts/jquery-3.2.1.min.js"></script>
+    <script src="/js/echarts/echarts4.min.js"></script>
+</head>
+<body>
+
+    <div id="chart1" style="width: 1200px; height: 600px; position: absolute; margin: auto;"></div>
+
+    <video id="D10004P1007" src="/music/关键词.mp3" controls="controls" width="350px" height="30px"></video>
+
+    <script th:inline="javascript">
+
+        //var chart1 = echarts.init(document.getElementById('main'));
+        var chart1 = echarts.init($("#chart1")[0]);
+
+        var myColor =[ '#1089E7', '#F57474', '#56D0E3', '#F8B448', '#8B78F6' ]
+
+
+        var length =5;
+        function ajaxrequest() {
+            $.get("/charts/4data",
+                { "length":length},
+                function(data){
+                    //回调函数
+                    var sbBrandIds = data.split("-")[0];
+                    var sbMoneys = data.split("-")[0];
+                    length++;
+                    var option = {
+                        title: {
+                            text: '中软国际，电商BI数据分析Ver1.0'
+                        },
+                        tooltip: {},
+                        legend: {
+                            data:['品牌销量']
+                        },
+                        xAxis: {
+                            data: eval( sbBrandIds )
+                        },
+                        yAxis: {},
+                        series: [{
+                            type: 'bar',
+                            data: eval( sbMoneys )
+                        }]
+                    };
+
+                    chart1.setOption(option);
+
+
+                }
+            )
+        }
+        setInterval("ajaxrequest()",3000);
+    </script>
+</body>
+</html>

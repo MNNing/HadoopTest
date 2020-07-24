@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax调用者</title>
+    <script src="/js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+
+<textarea id="ta"></textarea>
+
+<script>
+
+        //定时向服务器发出ajax请求，将请求结果动态的添加到多行文本框中
+        function ajaxrequest() {
+            var no = Math.ceil(Math.random()*10);
+            $.get("/test/getdata",
+                { index: no},
+                function(data){
+                    //回调函数
+                    $("#ta").text(data);
+                }
+            )
+        }
+        setInterval("ajaxrequest()",1000);
+
+    </script>
+
+</body>
+</html>

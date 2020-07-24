@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON格式测试</title>
+</head>
+<body>
+    <h1>JSON格式测试</h1>
+    <script>
+        var jsonStr = "[{'table':{'rows':[{'adminId':1, 'deptId':1,'adminName':'苏关兴'},{'adminId':2, 'deptId':3,'adminName':'孟宁宁'}]}}]";
+        var jsonObj = eval(jsonStr);
+        alert(jsonObj[0].table.rows[1].adminName);
+    </script>
+</body>
+</html>

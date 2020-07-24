@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>电商订单数据BI统计 -- 品牌销量</title>
+    <script src="/js/echarts/jquery-3.2.1.min.js"></script>
+    <script src="/js/echarts/echarts4.min.js"></script>
+</head>
+<body>
+
+    <div id="chart1" style="width: 1200px; height: 600px; position: absolute; margin: auto;"></div>
+
+    <script th:inline="javascript">
+
+        //var chart1 = echarts.init(document.getElementById('main'));
+        var chart1 = echarts.init($("#chart1")[0]);
+
+        var myColor =[ '#1089E7', '#F57474', '#56D0E3', '#F8B448', '#8B78F6' ]
+
+        option = {
+            backgroundColor:'#0e2147',
+            grid: {
+                left: '11%',
+                top:'12%',
+                right: '0%',
+                bottom: '8%',
+                containLabel: true
+            },
+            xAxis: [{
+                show: false,
+            }],
+            yAxis: [{
+                axisTick:'none',
+                axisLine:'none',
+                offset:'27',
+                axisLabel: {
+                    textStyle: {
+                        color: '#ffffff',
+                        fontSize:'16',
+                    }
+                },
+                data: eval([[${sbBrandIds}]])
+            }, {
+                axisTick:'none',
+                axisLine:'none',
+                axisLabel: {
+                    textStyle: {
+                        color: '#ffffff',
+                        fontSize:'16',
+                    }
+                },
+                data: ['1000000','1000000','1000000','1000000','1000000','1000000','1000000','1000000']
+            },{
+                name:'',
+                nameGap:'50',
+                nameTextStyle:{
+                    color:'#ffffff',
+                    fontSize:'16',
+                },
+                axisLine:{
+                    lineStyle:{
+                        color:'rgba(0,0,0,0)'
+                    }
+                },
+                data: [],
+            }],
+            series: [{
+                name: '条',
+                type: 'bar',
+                yAxisIndex: 0,
+                data: eval([[${sbMoneys}]]) ,
+                label:{
+                    normal:{
+                        show:true,
+                        position:'right',
+                        formatter:function(param){
+                            return param.value + '%';
+                        },
+                        textStyle:{
+                            color: '#ffffff',
+                            fontSize:'16',
+                        }
+                    }
+                },
+                barWidth: 12,
+                itemStyle: {
+                    normal: {
+                        color: function(params) {
+                            var num=myColor.length;
+                            return myColor[params.dataIndex%num]
+                        },
+                    }
+                },
+                z: 2
+            }, {
+                name: '白框',
+                type: 'bar',
+                yAxisIndex: 1,
+                barGap: '-100%',
+                data: [99,99.5,99.5,99.5,99.5,99.5,99.5,99.5],
+                barWidth: 20,
+                itemStyle: {
+                    normal: {
+                        color: '#0e2147',
+                        barBorderRadius: 5,
+                    }
+                },
+                z: 1
+            }, {
+                name: '外框',
+                type: 'bar',
+                yAxisIndex: 2,
+                barGap: '-100%',
+                data: [100,100,100,100,100,100,100,100],
+                barWidth: 24,
+                itemStyle: {
+                    normal: {
+                        color: function(params) {
+                            var num=myColor.length;
+                            return myColor[params.dataIndex%num]
+                        },
+                        barBorderRadius: 5,
+                    }
+                },
+                z: 0
+            },
+                {
+                    name: '外圆',
+                    type: 'scatter',
+                    hoverAnimation: false,
+                    data: [0,0,0,0,0,0,0,0],
+                    yAxisIndex: 2,
+                    symbolSize: 35,
+                    itemStyle: {
+                        normal: {
+                            color: function(params) {
+                                var num=myColor.length;
+                                return myColor[params.dataIndex%num]
+                            },
+                            opacity: 1,
+                        }
+                    },
+                    z: 2
+                }]
+        };
+
+
+        chart1.setOption(option);
+    </script>
+
+</body>
+</html>

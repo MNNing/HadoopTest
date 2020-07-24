@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echarts 入门图表示例</title>
+    <script src="/js/echarts/jquery-3.2.1.min.js"></script>
+    <script src="/js/echarts/echarts4.min.js"></script>
+</head>
+<body>
+
+<div id="chart1" style="width: 400px; height: 300px;"></div>
+
+<script>
+        //var chart1 = echarts.init(document.getElementById('main'));
+        var chart1 = echarts.init($("#chart1")[0]);
+
+        var option = {
+            title: {
+                text: '第一个数据可视化图表'
+            },
+            tooltip: {},
+            legend: {
+                data:['成绩']
+            },
+            xAxis: {
+                data: ["英语","数学","Java","数据库"]
+            },
+            yAxis: {},
+            series: [{
+                type: 'bar',
+                data: [100, 99, 89, 95]
+            }]
+        };
+
+        chart1.setOption(option);
+    </script>
+
+</body>
+</html>

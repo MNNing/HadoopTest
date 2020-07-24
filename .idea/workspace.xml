@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f1d03ad2-b287-4d82-9a6b-f5387275157d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="HadoopApiTest" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eAWP9WKQw67TxLKlfa6dMarhJx" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/music" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.gary.mr" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\BigDataPractice\HadoopApiTest\src\main\resources\static\music" />
+      <recent name="E:\BigDataPractice\HadoopApiTest\src\main\resources\templates" />
+      <recent name="E:\BigDataPractice\HadoopApiTest\src\main\java\cn\gary\jdbc" />
+      <recent name="E:\BigDataPractice\HadoopApiTest\src\main\resources\static\js\echarts" />
+      <recent name="E:\BigDataPractice\HadoopApiTest\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.gary.App" />
+      <module name="HadoopApiTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.gary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HiveUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.gary.jdbc.HiveUtil" />
+      <module name="HadoopApiTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.gary.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdbcTest1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.gary.jdbc.JdbcTest1" />
+      <module name="HadoopApiTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.gary.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapReduceWordsCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.gary.mr.MapReduceWordsCount" />
+      <module name="HadoopApiTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.gary.mr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoLogsDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.gary.mr.VideoLogsDriver" />
+      <module name="HadoopApiTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.gary.mr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.HiveUtil" />
+        <item itemvalue="Application.JdbcTest1" />
+        <item itemvalue="Application.MapReduceWordsCount" />
+        <item itemvalue="Application.VideoLogsDriver" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1d03ad2-b287-4d82-9a6b-f5387275157d" name="Default Changelist" comment="" />
+      <created>1593764852707</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593764852707</updated>
+    </task>
+    <servers />
+  </component>
+</project>
